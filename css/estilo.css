@@ -136,17 +136,3 @@ body {
   margin-right: 0;
 }
 
-.product-item {
-  width: 200px;    
-  text-align: left;      
-}
-
-.product-item img {
-  display: block;
-  margin-left: auto;     
-  margin-right: 0;
-  max-width: 180px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
