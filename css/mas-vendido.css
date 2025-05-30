@@ -1,0 +1,161 @@
+ /* Estilos generales */
+    html, body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+    }
+
+    .main-container {
+      display: flex;
+      padding: 20px;
+      align-items: flex-start;
+      justify-content: center; /* Centra el contenido horizontalmente */
+    }
+
+    /* Menú lateral */
+    .sidebar-menu {
+      margin-left: 100px; /* más a la derecha */
+      margin-top: 50px;  /* más abajo */
+    }
+
+    .sidebar-menu nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Primer enlace: solo texto negro, más grande y negrita */
+    
+    .sidebar-menu nav a:first-child {
+      background: none !important;
+      color: black !important;
+      padding: 0 !important;
+      font-weight: 900 !important;
+      font-size: 22px;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      border: none !important;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      display: inline-block;
+      user-select: none;
+    }
+
+    .sidebar-menu nav a:first-child:hover {
+      color: goldenrod;
+    }
+
+    /* Los demás enlaces: botón dorado suave, rectangulares sin bordes redondeados */
+    .sidebar-menu nav a:not(:first-child) {
+      background-color: #d4af37; /* dorado suave */
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 0; /* sin bordes redondeados */
+      box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      font-size: 16px;
+      display: inline-block;
+      user-select: none;
+    }
+
+    .sidebar-menu nav a:not(:first-child):hover {
+      background-color: #c9a637; /* un poco más oscuro al pasar el mouse */
+      box-shadow: 0 6px 12px rgba(201, 166, 55, 0.7);
+      cursor: pointer;
+      color: white;
+    }
+
+    /* Sección de productos */
+    .best-sellers {
+      margin: 0 auto; /* Centra la sección */
+      max-width: 900px; /* Más ancho para imágenes más grandes */
+    }
+
+    .header-buttons {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .carousel-button {
+      font-size: 16px;
+      color: goldenrod;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 4px;
+      padding: 6px 12px;
+      box-shadow: 0 0 4px #ccc;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      user-select: none;
+    }
+
+    .carousel-button:hover {
+      background-color: goldenrod;
+      color: white;
+    }
+
+    /* Productos grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      justify-content: center; /* centra las columnas dentro del grid */
+    }
+
+    .product-item {
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s;
+    }
+
+    .product-item:hover {
+      transform: scale(1.05);
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 260px; /* imágenes más grandes */
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; /* centra imagen */
+    }
+
+    .product-item h3 {
+      color: goldenrod;
+      margin: 10px 0 5px;
+    }
+
+    .product-item p {
+      font-size: 14px;
+      margin: 0 0 5px;
+    }
+
+    .price {
+      color: goldenrod;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Páginas por defecto ocultas */
+    .page {
+      display: none;
+    }
+
+    /* Mostrar página 1 si radio está chequeado */
+    #pagina1-radio:checked ~ .best-sellers #pagina1 {
+      display: grid;
+    }
+
+    /* Mostrar página 2 si radio está chequeado */
+    #pagina2-radio:checked ~ .best-sellers #pagina2 {
+      display: grid;
+    }

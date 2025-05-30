@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #fdfdfd;
+}
+
+.best-sellers {
+  position: relative;
+}
+
+.best-sellers h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid goldenrod; /* Línea dorada debajo del título */
+  padding-bottom: 5px;
+  display: inline-block; /* La línea solo tan ancha como el texto */
+  color: goldenrod;
+  text-align: left;       /* título alineado a la izquierda */
+}
+
+.best-sellers h2 a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Flechas a los extremos */
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  flex: 1; /* Para que ocupe el espacio central */
+  margin: 0 10px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome y otros WebKit */
+}
+
+.product-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+  outline: none; /* Eliminar borde foco */
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item:focus {
+  outline: none;
+}
+
+.product-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-item h3 {
+  color: goldenrod;
+  margin: 10px 0 5px;
+}
+
+.product-item p {
+  color: #000;
+  font-size: 14px;
+  margin: 0 0 5px;
+}
+
+.product-item .price {
+  color: goldenrod;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Flechas */
+.arrow {
+  font-size: 40px;
+  color: goldenrod;
+  text-decoration: none;
+  padding: 10px;
+  user-select: none;
+  cursor: pointer;
+  background-color: rgba(255 255 255 / 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ccc;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow:hover {
+  background-color: goldenrod;
+  color: white;
+}
+
+.arrow-left {
+  order: 0;
+}
+
+.arrow-right {
+  order: 2;
+}
+
+.best-sellers h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid goldenrod;
+  padding-bottom: 5px;
+  display: inline-block;  /* hace que la línea solo abarque el texto */
+  color: goldenrod;
+  text-align: left;       /* título alineado a la izquierda */
+  /* quitar width 100% y margenes para que no se extienda */
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+  max-width: 1100px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.product-item {
+  width: 200px;          /* ancho fijo para controlar */
+  text-align: left;      /* texto alineado a la izquierda (opcional) */
+  /* Si quieres el texto centrado, cambia a center */
+}
+
+.product-item img {
+  display: block;
+  margin-left: auto;     /* empuja la imagen a la derecha */
+  margin-right: 0;
+  max-width: 180px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}

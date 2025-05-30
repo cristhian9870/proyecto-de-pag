@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Más Vendidos</title>
+    <link rel="stylesheet" href="css/mas-vendido.css" />
+</head>
+<body>
+  <section class="main-container">
+
+    <!-- Menú lateral -->
+    <aside class="sidebar-menu">
+      <nav>
+        <a href="index.html" class="menu-button negro">Inicio</a>
+        <a href="#" class="menu-button dorado">TECNOLOGIA</a>
+        <a href="#" class="menu-button dorado">ROPA</a>
+        <a href="#" class="menu-button dorado">ACCESORIOS</a>
+      </nav>
+    </aside>
+
+    <!-- Radios ocultos para controlar páginas -->
+    <input type="radio" id="pagina1-radio" name="pagina" checked hidden>
+    <input type="radio" id="pagina2-radio" name="pagina" hidden>
+
+    <!-- Galería de productos -->
+    <section class="best-sellers">
+
+      <div class="header-buttons">
+        <label for="pagina1-radio" class="carousel-button">&lt;</label>
+        <label for="pagina2-radio" class="carousel-button">&gt;</label>
+      </div>
+
+      <!-- Página 1 -->
+      <div class="products-grid page" id="pagina1">
+        <a href="#" class="product-item"><img src="img/capibara.jpg" alt=""><h3>Producto 1</h3><p>MOCHILA CAPIBARA MUY VIRAL</p><span class="price">S/. 100</span></a>
+        <a href="#" class="product-item"><img src="img/hidro.jpeg" alt=""><h3>Producto 2</h3><p>🚘HIDROLAVADORA DE 120 VOLTIOS INALÁMBRICO🏍</p><span class="price">S/. 110</span></a>
+        <a href="#" class="product-item"><img src="img/PERFUME1.JPG" alt=""><h3>Producto 3</h3><p>PERFUME DE MUJER INDIAN COLECTION</p><span class="price">S/. 120</span></a>
+        <a href="#" class="product-item"><img src="img/ZAPA1.jpg" alt=""><h3>Producto 4</h3><p>ZAPATILLA PARA HOMBRE 👟👟</p><span class="price">S/. 130</span></a>
+        <a href="#" class="product-item"><img src="img/GUANTES.jpg" alt=""><h3>Producto 5</h3><p>🧤GUANTES DE COMPRESIÓN PARA ARTRITIS</p><span class="price">S/. 140</span></a>
+        <a href="#" class="product-item"><img src="img/KIT1.jpg" alt=""><h3>Producto 6</h3><p>⌨ KIT TECLADO+MOUSE INALÁMBRICO⌨</p><span class="price">S/. 150</span></a>
+      </div>
+
+      <!-- Página 2 -->
+      <div class="products-grid page" id="pagina2">
+        <a href="#" class="product-item"><img src="img/LABIAL.jpg" alt=""><h3>Producto 7</h3><p>SET DE 12 LABIALES LIP GLOSS MATTE HUDA BEAUTY</p><span class="price">S/. 160</span></a>
+        <a href="#" class="product-item"><img src="img/BOLSO1.jpg" alt=""><h3>Producto 8</h3><p>BOLSO IMPERMEABLE UNISEX</p><span class="price">S/. 170</span></a>
+        <a href="#" class="product-item"><img src="img/TALADRO1.jpg" alt=""><h3>Producto 9</h3><p>MINI TALADRO INALAMBRICO-RECARGABLE 🛠</p><span class="price">S/. 180</span></a>
+        <a href="#" class="product-item"><img src="img/CAPIBARA2.jpg" alt=""><h3>Producto 10</h3><p>MOCHILA CAPIBARA 3 EN 1 3D CON LUCES</p><span class="price">S/. 190</span></a>
+        <a href="#" class="product-item"><img src="img/PULSERACAPI.jpg" alt=""><h3>Producto 11</h3><p>LAMPARA DE NOCHE DE TULIPAN CON FORMA DE CONCHA</p><span class="price">S/. 200</span></a>
+        <a href="#" class="product-item"><img src="img/LAMPARA1.jpg" alt=""><h3>Producto 12</h3><p>BRASALETE DE CAPIBARA</p><span class="price">S/. 210</span></a>
+      </div>
+
+    </section>
+  </section>
+</body>
+</html>
