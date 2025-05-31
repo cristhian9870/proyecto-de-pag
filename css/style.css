@@ -1,0 +1,153 @@
+/*body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}*/
+
+.most-sold-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f7dc6f;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Importante para que el carrusel funcione */
+}
+
+h2 {
+    text-align: left;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta los elementos que están fuera de vista */
+    position: relative;
+    padding-bottom: 20px; /* Espacio para el scrollbar en algunos navegadores */
+}
+
+.carousel-track {
+    display: flex;
+    /* Calculamos el ancho total para incluir clones para un loop continuo */
+    /* Si tienes 6 ítems y quieres mostrar 4, el ancho será 6/4 = 150% del contenedor visible,
+       pero para el loop, se duplica el contenido, así que necesitarás más espacio.
+       Para este ejemplo, asumimos 6 ítems base y 4 visibles. */
+    width: calc(250% + 40px); /* Ajusta este valor según la cantidad de ítems y su margen */
+    animation: scrollCarousel 15s linear infinite; /* Ajusta la duración y el tipo de animación */
+}
+
+.product-card {
+    flex: 0 0 calc(25% - 20px); /* 4 ítems por vista, con un margen de 20px entre ellos */
+    margin: 0 10px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 15px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product-card .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff4d4f; /* Color de descuento */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.product-info h3 {
+    font-size: 1em;
+    color: #555;
+    margin: 0 10px 5px;
+    line-height: 1.3;
+    min-height: 40px; /* Para mantener la altura consistente */
+}
+
+.product-info .price {
+    font-size: 1.1em;
+    color: #e60023; /* Color de precio principal */
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.product-info .old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+/* Animación de desplazamiento */
+@keyframes scrollCarousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 20px)); /* Desplaza la mitad del contenido + margen */
+    }
+}
+
+/* Opcional: Pausar la animación al pasar el ratón */
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .product-card {
+        flex: 0 0 calc(50% - 20px); /* 2 ítems por vista en pantallas medianas */
+    }
+    .carousel-track {
+        width: calc(200% + 40px); /* Ajustar el ancho del track para 2 ítems por vista */
+        animation: scrollCarouselMobile 20s linear infinite;
+    }
+    @keyframes scrollCarouselMobile {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-100% - 40px)); /* Desplaza una sección completa */
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 0 0 calc(100% - 20px); /* 1 ítem por vista en pantallas pequeñas */
+    }
+    .carousel-track {
+        width: calc(100% + 20px); /* Ajustar el ancho del track para 1 ítem por vista */
+        animation: scrollCarouselSmall 25s linear infinite;
+    }
+     @keyframes scrollCarouselSmall {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-100% - 20px));
+        }
+    }
+}
