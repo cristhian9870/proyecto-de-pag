@@ -18,9 +18,9 @@
 /* ===== CONTENEDOR DE LAS COLUMNAS DEL FOOTER ===== */
 .footer-row {
     display: grid;            /* Usa CSS Grid para organizar las columnas */
-    /* Crea columnas que se ajustan automáticamente, mínimo 280px, máximo el espacio disponible */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 50px;                /* Espacio de 50px entre cada columna */
+    /* Crea columnas que se ajustan automáticamente, mínimo 230px, máximo el espacio disponible */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;                /* Espacio de 40px entre cada columna */
     margin-bottom: 24px;      /* Espacio de 24px debajo de toda la fila */
 }
 
