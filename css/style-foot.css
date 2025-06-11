@@ -1,0 +1,147 @@
+/* ===== CONTENEDOR PRINCIPAL DEL FOOTER ===== */
+.containerfooter {
+    max-width: 1200px;        /* El contenido nunca será más ancho que 1200px */
+    margin: 0 auto;           /* Centra el contenedor horizontalmente en la página */
+    padding: 0 20px;          /* Añade 20px de espacio interno a los lados */
+}
+
+/* ===== ESTILOS GENERALES DEL FOOTER ===== */
+.footer {
+    background: #ffffff;      /* Fondo blanco para todo el footer */
+    padding: 60px 0 30px;     /* Espacio interno: 60px arriba, 0 a los lados, 30px abajo */
+    width: 100%;              /* El footer ocupa todo el ancho disponible */
+    border-top: 5px solid #e9ecef;  /* Línea superior de 5px de grosor, color gris claro */
+    position: relative;       /* Permite posicionar elementos hijos de forma absoluta si es necesario */
+    font-family: sans-serif;  /* Usa una fuente sin serifa (como Arial, Helvetica) */
+}
+
+/* ===== CONTENEDOR DE LAS COLUMNAS DEL FOOTER ===== */
+.footer-row {
+    display: grid;            /* Usa CSS Grid para organizar las columnas */
+    /* Crea columnas que se ajustan automáticamente, mínimo 230px, máximo el espacio disponible */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 40px;                /* Espacio de 40px entre cada columna */
+    margin-bottom: 24px;      /* Espacio de 24px debajo de toda la fila */
+}
+
+/* ===== CADA SECCIÓN INDIVIDUAL DEL FOOTER ===== */
+.footer-section {
+    padding: 0;               /* Sin espacio interno adicional */
+}
+
+/* ===== TÍTULOS DE CADA SECCIÓN ===== */
+.footer-section h4 {
+    font-size: 18px;          /* Tamaño de letra de 18 píxeles */
+    color: #212529;           /* Color gris muy oscuro (casi negro) */
+    margin-bottom: 24px;      /* Espacio de 24px debajo del título */
+    font-weight: 600;         /* Texto semi-negrita (más pesado que normal) */
+    letter-spacing: -0.025em; /* Reduce ligeramente el espacio entre letras */
+}
+
+/* ===== ELEMENTOS DE LISTA EN CADA SECCIÓN ===== */
+.footer-section ul li {
+    margin-bottom: 12px;      /* Espacio de 12px debajo de cada elemento de lista */
+}
+
+/* ===== ENLACES DENTRO DE LAS LISTAS ===== */
+.footer-section ul li a {
+    font-size: 15px;          /* Tamaño de letra de 15 píxeles */
+    color: #6c757d;           /* Color gris medio */
+    text-decoration: none;    /* Quita el subrayado predeterminado de los enlaces */
+    transition: color 0.2s ease; /* Animación suave de 0.2 segundos cuando cambia el color */
+    display: block;           /* Hace que el enlace ocupe todo el ancho disponible */
+    padding: 4px 0;           /* Espacio interno de 4px arriba y abajo */
+}
+
+/* ===== EFECTO HOVER EN LOS ENLACES ===== */
+.footer-section ul li a:hover {
+    color: #212529;           /* Cambia a color gris oscuro cuando pasas el mouse encima */
+}
+
+/* ===== ELEMENTOS DE CONTACTO ===== */
+.contact-item {
+    display: flex;            /* Usa flexbox para alinear ícono y texto horizontalmente */
+    align-items: center;      /* Centra verticalmente el ícono y el texto */
+    margin-bottom: 16px;      /* Espacio de 16px debajo de cada elemento de contacto */
+    text-decoration: none;    /* Quita el subrayado si es un enlace */
+    color: inherit;           /* Hereda el color del elemento padre */
+    transition: opacity 0.2s ease; /* Animación suave para el efecto de transparencia */
+}
+
+/* ===== EFECTO HOVER EN ELEMENTOS DE CONTACTO ===== */
+.contact-item:hover {
+    opacity: 0.7;             /* Reduce la opacidad al 70% cuando pasas el mouse */
+}
+
+/* ===== ÍCONOS DENTRO DE LOS ELEMENTOS DE CONTACTO ===== */
+.contact-item i {
+    font-size: 16px;          /* Tamaño del ícono de 16 píxeles */
+    margin-right: 12px;       /* Espacio de 12px a la derecha del ícono */
+    width: 20px;              /* Ancho fijo de 20px para alinear todos los íconos */
+    color: #6c757d;           /* Color gris medio */
+    flex-shrink: 0;           /* Impide que el ícono se reduzca de tamaño */
+}
+
+/* ===== TEXTO DENTRO DE LOS ELEMENTOS DE CONTACTO ===== */
+.contact-item span {
+    color: #6c757d;           /* Color gris medio */
+    font-size: 15px;          /* Tamaño de letra de 15 píxeles */
+}
+
+/* ===== ELEMENTOS DE REDES SOCIALES ===== */
+.social-item {
+    display: flex;            /* Usa flexbox para alinear ícono y texto */
+    align-items: center;      /* Centra verticalmente */
+    margin-bottom: 12px;      /* Espacio de 12px debajo */
+    text-decoration: none;    /* Sin subrayado */
+    color: inherit;           /* Hereda el color del padre */
+    transition: opacity 0.2s ease; /* Animación suave de transparencia */
+}
+
+/* ===== EFECTO HOVER EN REDES SOCIALES ===== */
+.social-item:hover {
+    opacity: 0.7;             /* Reduce opacidad al pasar el mouse */
+}
+
+/* ===== ÍCONOS DE REDES SOCIALES ===== */
+.social-item i {
+    font-size: 16px;          /* Tamaño del ícono */
+    margin-right: 12px;       /* Espacio a la derecha */
+    width: 20px;              /* Ancho fijo para alineación */
+    color: #6c757d;           /* Color gris medio */
+    flex-shrink: 0;           /* No se reduce de tamaño */
+}
+
+/* ===== TEXTO DE REDES SOCIALES ===== */
+.social-item span {
+    color: #6c757d;           /* Color gris medio */
+    font-size: 15px;          /* Tamaño de letra */
+}
+
+/* ===== PARTE INFERIOR DEL FOOTER ===== */
+.footer-bottom {
+    padding-top: 30px;        /* Espacio de 30px en la parte superior */
+    border-top: 1px solid #e9ecef; /* Línea superior de 1px, color gris claro */
+    display: flex;            /* Usa flexbox para organizar elementos horizontalmente */
+    justify-content: space-between;
+    align-items: center;      /* Centra verticalmente los elementos */
+    flex-wrap: wrap;          /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    gap: 20px;                /* Espacio de 20px entre elementos */
+}
+
+/* ===== MARCA/LOGO EN LA PARTE INFERIOR ===== */
+.footer-bottom .brand {
+    color: #212529;           /* Color gris oscuro */
+    font-weight: 600;         /* Texto semi-negrita */
+    font-size: 16px;          /* Tamaño de letra */
+    margin: 0;                /* Sin márgenes */
+}
+
+/* ===== TEXTO DE COPYRIGHT ===== */
+.footer-bottom .copyright {
+    color: #6c757d;           /* Color gris medio */
+    font-size: 14px;          /* Tamaño de letra más pequeño */
+    margin: 0;                /* Sin márgenes */
+    flex: 1;                  /* Toma todo el espacio disponible restante */
+    text-align: right;        /* Alinea el texto a la derecha */
+}
