@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/estilo.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/style-foot.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/Novedades.css" />
 </head>
 
 <header class="header">
@@ -54,66 +54,117 @@
 </header>
 
 <body>
+    <!-- inicio novedades -->
+    <section class="product-gallery-section">
+        <h2 class="section-title">¡Novedades!</h2>
+        
+        <div class="gallery-carousel-wrapper">
+            <!-- Flecha Izquierda - Apunta al primer producto -->
+            <a href="#product1" class="nav-arrow prev-arrow">&#8249;</a> 
 
-  <section class="most-sold-section">
-        <h2>¡Novedades!</h2>
-        <div class="carousel-container">
-            <div class="carousel-track">
-                <!--imagen_1-->
-                <div class="product-card">
-                    <span class="discount">-20%</span>
-                    <img src="producto 1" alt="luz de discoteca">
-                    <div class="product-info">
-                        <h3>LUCES DISCOTECA CON PARLANTE Y USB <br>| accesorios y artículos de hogar</h3>
-                        <p class="price">S/. 20,80 <span class="old-price">S/. 35,00</span></p>
+            <div class="gallery-carousel-container">
+                <div class="gallery-carousel-track">
+                    <!-- Producto 1 (con ID para el enlace) -->
+                    <div class="product-card-wrapper" id="product1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="discount">-20%</span>
+                                <img src="img/ANTIFAZ-KAWAI.jpg" alt="ANTIFAZ CON GEL">
+                                <!-- La información del frente (título/precio) ha sido eliminada de aquí -->
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Antifaz con Gel</h3>
+                                <p class="description">Antifaz Relajante con Gel Refrescante.</p>
+                                <p class="price">S/. 6,80</p>
+                                <a href="#" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--imagen_2-->
-                <div class="product-card">
-                    <span class="discount">-10%</span>
-                    <img src="https://via.placeholder.com/250x250/EFEFEF/AAAAAA?text=Producto+2" alt="producto 2">
-                    <div class="product-info">
-                        <h3>imagen 2 | texto 2</h3>
-                        <p class="price">S/. 80,10 <span class="old-price">S/. 89,00</span></p>
+
+                    <!-- Producto 2 -->
+                    <div class="product-card-wrapper" id="product2">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/LUZ-DISCOTECA.jpg" alt="LUCES DISCOTECA CON PARLANTE Y USB">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Luces Discoteca conParlante y USB</h3>
+                                <p class="description">"ilumina y anima tus fiestas con ritmo y colores."</p>
+                                <p class="price">S/. 20,80</p>
+                                <a href="#" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--imagen_3-->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/250x250/EFEFEF/AAAAAA?text=Producto+3" alt="producto 3">
-                    <div class="product-info">
-                        <h3>imagen 3 | texto 3</h3>
-                        <p class="price">S/. 159,00</p>
+
+                    <!-- Producto 3 -->
+                    <div class="product-card-wrapper" id="product3">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/KIT-TECLADO-MAUSE.jpg" alt="KIT TECLADO+MOUSE INALÁMBRICO">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Kit Teclado + Mause Inalámbrico</h3>
+                                <p class="description">"Teclado + mouse inalámbrico: prácticos y sin cables.".</p>
+                                <p class="price">S/. 19,80</p>
+                                <a href="#" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--imagen_4-->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/250x250/EFEFEF/AAAAAA?text=Producto+4" alt="producto 4">
-                    <div class="product-info">
-                        <h3>imagen 4 | texto 4</h3>
-                        <p class="price">S/. 169,00</p>
+
+                    <!-- Producto 4 -->
+                    <div class="product-card-wrapper" id="product4">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="discount">-5%</span>
+                                <img src="img/PULSERA-CAPIBARA.jpg" alt="CAPIBARAS PULSERAS CON MOCHILA">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Pulsera de Capibara con Mochila</h3>
+                                <p class="description">"Pulsera-mochila de capibara: moda y funcionalidad."</p>
+                                <p class="price">S/. 12.80</p>
+                                <a href="#" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--imagen_5*-->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/250x250/EFEFEF/AAAAAA?text=Producto+5"
-                        alt="Producto Adicional 1">
-                    <div class="product-info">
-                        <h3>Producto Adicional de Ejemplo 1</h3>
-                        <p class="price">S/. 99,00</p>
+
+                    <!-- Producto 5 -->
+                    <div class="product-card-wrapper" id="product5">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="discount">-20%</span>
+                                <img src="img/GUANTES-TACTICOS.jpg" alt="GUANTES TÁCTICOS">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Guantes Tácticos</h3>
+                                <p class="description">"Guantes tácticos: seguridad y alto rendimiento."</p>
+                                <p class="price">S/. 12,80</p>
+                                <a href="#" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--imagen_6*-->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/250x250/EFEFEF/AAAAAA?text=Producto+6"
-                        alt="Producto Adicional 2">
-                    <div class="product-info">
-                        <h3>Producto Adicional de Ejemplo 2</h3>
-                        <p class="price">S/. 120,00</p>
+
+                    <!-- Producto 6 -->
+                    <div class="product-card-wrapper" id="product6">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="img/PROTECTOR-CAPIBARA.jpg" alt="PROTECTOR CELULAR CAPIBARA">
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Protector de Celular Capibara</h3>
+                                <p class="description">"Funda capibara: protege tu celular con estilo."</p>
+                                <p class="price">S/. 7,80</p>
+                                <a href="#" class="view-details-btn">Ver Detalles</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Flecha Derecha - Apunta al último producto -->
+            <a href="#product6" class="nav-arrow next-arrow">&#8250;</a> 
         </div>
     </section>
+    
+    <!-- aqui termina novedades -->
 
   <section class="best-sellers">
     <h2><a href="mas-vendido.html">¡Lo más vendido!</a></h2>
