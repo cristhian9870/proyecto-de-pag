@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>J&A IMPORT</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/estilo.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/style-foot.css" />
-  <link rel="stylesheet" href="css/Novedades.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>J&A IMPORT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style-foot.css" />
+    <link rel="stylesheet" href="css/Novedades.css" />
 </head>
 
 <header class="header">
-  <div class="container">
+    <div class="container">
 
-    <!-- LOGO -->
-    <div class="logo">
-      <h1>J&A <span>IMPORT</span></h1>
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>J&A <span>IMPORT</span></h1>
+        </div>
+
+        <!-- MENÚ PRINCIPAL -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Historial</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- MENÚ DESPLEGABLE -->
+        <div class="menu-hover">
+            <span class="boton-menu">☰ Menú</span>
+            <ul class="submenu">
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="ropa.html">Ropa</a></li>
+                <li><a href="juguestes.html">Juguetes</a></li>
+                <li><a href="acesorios.html">Accesorios</a></li>
+            </ul>
+        </div>
+
+        <!-- BUSCADOR + SESIÓN + CARRITO -->
+        <div class="acciones-derecha">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+            <a href="login.html" class="login">Iniciar sesión</a>
+            <a href="#" class="Carrito">Carrito</a>
+        </div>
+
     </div>
-
-    <!-- MENÚ PRINCIPAL -->
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#">Ofertas</a></li>
-        <li><a href="#">Historial</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <!-- MENÚ DESPLEGABLE -->
-    <div class="menu-hover">
-      <span class="boton-menu">☰ Menú</span>
-        <ul class="submenu">
-          <li><a href="tecnologia.html">Tecnología</a></li>
-            <li><a href="ropa.html">Ropa</a></li>
-            <li><a href="juguestes.html">Juguetes</a></li>
-          <li><a href="acesorios.html">Accesorios</a></li>
-        </ul>
-    </div>
-    
-    <!-- BUSCADOR + SESIÓN + CARRITO -->
-    <div class="acciones-derecha">
-      <form class="busqueda">
-        <input type="text" placeholder="Buscar productos...">
-        <button type="submit">Buscar</button>
-      </form>
-      <a href="login.html" class="login">Iniciar sesión</a>
-      <a href="#" class="Carrito">Carrito</a>
-    </div>
-
-  </div>
 </header>
 
 <body>
+    
     <!-- inicio novedades -->
     <section class="product-gallery-section">
         <h2 class="section-title">¡Novedades!</h2>
-        
+
         <div class="gallery-carousel-wrapper">
             <!-- Flecha Izquierda - Apunta al primer producto -->
-            <a href="#product1" class="nav-arrow prev-arrow">&#8249;</a> 
+            <a href="#product1" class="nav-arrow prev-arrow">&#8249;</a>
 
             <div class="gallery-carousel-container">
                 <div class="gallery-carousel-track">
@@ -160,85 +162,85 @@
                 </div>
             </div>
             <!-- Flecha Derecha - Apunta al último producto -->
-            <a href="#product6" class="nav-arrow next-arrow">&#8250;</a> 
+            <a href="#product6" class="nav-arrow next-arrow">&#8250;</a>
         </div>
     </section>
-    
+
     <!-- aqui termina novedades -->
 
-  <section class="best-sellers">
-    <h2><a href="mas-vendido.html">¡Lo más vendido!</a></h2>
+    <section class="best-sellers">
+        <h2><a href="mas-vendido.html">¡Lo más vendido!</a></h2>
 
-    <div class="carousel-container">
-      <a href="#product1" class="arrow arrow-left">&#8249;</a>
+        <div class="carousel-container">
+            <a href="#product1" class="arrow arrow-left">&#8249;</a>
 
-      <div class="scroll-container">
-        <a href="detalle-producto.html?id=product1" class="product-item" id="product1">
-          <img src="img/capibara.jpg" alt="Producto 1" />
-          <h3>MOCHILA CAPIBARA</h3>
-          <p>MOCHILA CAPIBARA MUY VIRAL</p>
-          <span class="price">S/. 46,80</span>
-          </a>
-        <a href="detalle-producto.html?id=product2" class="product-item" id="product2">
-          <img src="img/hidro.jpeg" alt="Producto 2" />
-          <h3>HIDROLAVADORA</h3>
-          <p>🚘HIDROLAVADORA DE 120 VOLTIOS INALÁMBRICO🏍</p>
-          <span class="price">S/. 60,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product3" class="product-item" id="product3">
-          <img src="img/PERFUME1.JPG" alt="Producto 3" />
-          <h3>PERFUME</h3>
-          <p>PERFUME DE MUJER INDIAN COLECTION</p>
-          <span class="price">S/. 16,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product4" class="product-item" id="product4">
-          <img src="img/ZAPA1.jpg" alt="Producto 4" />
-          <h3>ZAPATILLA</h3>
-          <p>ZAPATILLA PARA HOMBRE 👟👟</p>
-          <span class="price">S/. 40,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product5" class="product-item" id="product5">
-          <img src="img/GUANTES.jpg" alt="Producto 5" />
-          <h3>GUANTES</h3>
-          <p>🧤GUANTES DE COMPRESIÓN PARA ARTRITIS</p>
-          <span class="price">S/. 11,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product6" class="product-item" id="product6">
-          <img src="img/KIT1.jpg" alt="Producto 6" />
-          <h3>TECLADO+MOUSE </h3>
-          <p>⌨ KIT TECLADO+MOUSE INALÁMBRICO⌨</p>
-          <span class="price">S/. 19,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product7" class="product-item" id="product7">
-          <img src="img/LABIAL.jpg" alt="Producto 7" />
-          <h3>LABIALES</h3>
-          <p>SET DE 12 LABIALES LIP GLOSS MATTE HUDA BEAUTY</p>
-          <span class="price">S/. 24,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product8" class="product-item" id="product8">
-          <img src="img/BOLSO1.jpg" alt="Producto 8" />
-          <h3>BOLSO</h3>
-          <p>BOLSO IMPERMEABLE UNISEX</p>
-          <span class="price">S/. 13,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product9" class="product-item" id="product9">
-          <img src="img/TALADRO1.jpg" alt="Producto 9" />
-          <h3>TALADRO MINI</h3>
-          <p>MINI TALADRO INALAMBRICO-RECARGABLE 🛠</p>
-          <span class="price">S/. 20,80</span>
-        </a>
-        <a href="detalle-producto.html?id=product10" class="product-item" id="product10">
-          <img src="img/CAPIBARA2.jpg" alt="Producto 10" />
-          <h3>MOCHILA CAPIBARA 3 EN 1</h3>
-          <p>MOCHILA CAPIBARA 3 EN 1 3D CON LUCES</p>
-          <span class="price">S/. 55,80</span>
-        </a>
-      </div>
+            <div class="scroll-container">
+                <a href="detalle-producto.html?id=product1" class="product-item" id="product1">
+                    <img src="img/capibara.jpg" alt="Producto 1" />
+                    <h3>MOCHILA CAPIBARA</h3>
+                    <p>MOCHILA CAPIBARA MUY VIRAL</p>
+                    <span class="price">S/. 46,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product2" class="product-item" id="product2">
+                    <img src="img/hidro.jpeg" alt="Producto 2" />
+                    <h3>HIDROLAVADORA</h3>
+                    <p>🚘HIDROLAVADORA DE 120 VOLTIOS INALÁMBRICO🏍</p>
+                    <span class="price">S/. 60,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product3" class="product-item" id="product3">
+                    <img src="img/PERFUME1.JPG" alt="Producto 3" />
+                    <h3>PERFUME</h3>
+                    <p>PERFUME DE MUJER INDIAN COLECTION</p>
+                    <span class="price">S/. 16,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product4" class="product-item" id="product4">
+                    <img src="img/ZAPA1.jpg" alt="Producto 4" />
+                    <h3>ZAPATILLA</h3>
+                    <p>ZAPATILLA PARA HOMBRE 👟👟</p>
+                    <span class="price">S/. 40,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product5" class="product-item" id="product5">
+                    <img src="img/GUANTES.jpg" alt="Producto 5" />
+                    <h3>GUANTES</h3>
+                    <p>🧤GUANTES DE COMPRESIÓN PARA ARTRITIS</p>
+                    <span class="price">S/. 11,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product6" class="product-item" id="product6">
+                    <img src="img/KIT1.jpg" alt="Producto 6" />
+                    <h3>TECLADO+MOUSE </h3>
+                    <p>⌨ KIT TECLADO+MOUSE INALÁMBRICO⌨</p>
+                    <span class="price">S/. 19,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product7" class="product-item" id="product7">
+                    <img src="img/LABIAL.jpg" alt="Producto 7" />
+                    <h3>LABIALES</h3>
+                    <p>SET DE 12 LABIALES LIP GLOSS MATTE HUDA BEAUTY</p>
+                    <span class="price">S/. 24,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product8" class="product-item" id="product8">
+                    <img src="img/BOLSO1.jpg" alt="Producto 8" />
+                    <h3>BOLSO</h3>
+                    <p>BOLSO IMPERMEABLE UNISEX</p>
+                    <span class="price">S/. 13,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product9" class="product-item" id="product9">
+                    <img src="img/TALADRO1.jpg" alt="Producto 9" />
+                    <h3>TALADRO MINI</h3>
+                    <p>MINI TALADRO INALAMBRICO-RECARGABLE 🛠</p>
+                    <span class="price">S/. 20,80</span>
+                </a>
+                <a href="detalle-producto.html?id=product10" class="product-item" id="product10">
+                    <img src="img/CAPIBARA2.jpg" alt="Producto 10" />
+                    <h3>MOCHILA CAPIBARA 3 EN 1</h3>
+                    <p>MOCHILA CAPIBARA 3 EN 1 3D CON LUCES</p>
+                    <span class="price">S/. 55,80</span>
+                </a>
+            </div>
 
-      <a href="#product10" class="arrow arrow-right">&#8250;</a>
-    </div>
-  </section>
-   <footer class="footer">
+            <a href="#product10" class="arrow arrow-right">&#8250;</a>
+        </div>
+    </section>
+    <footer class="footer">
         <div class="containerfooter">
             <div class="footer-row">
                 <div class="footer-section">
@@ -283,8 +285,11 @@
                     </a>
                 </div>
                 <div class="footer-section">
-                  <h4> Ubicación </h4>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.908900274305!2d-77.04540032418396!3d-12.118385443239918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9fdebb881f3%3A0x4cef76dcb490c1e0!2sNotPig!5e0!3m2!1sen!2spe!4v1749600801949!5m2!1sen!2spe" width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <h4> Ubicación </h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.908900274305!2d-77.04540032418396!3d-12.118385443239918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9fdebb881f3%3A0x4cef76dcb490c1e0!2sNotPig!5e0!3m2!1sen!2spe!4v1749600801949!5m2!1sen!2spe"
+                        width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -295,4 +300,5 @@
         </div>
     </footer>
 </body>
+
 </html>
