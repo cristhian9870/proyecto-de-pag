@@ -5,9 +5,12 @@ body {
     background: hsl(250, 7%, 84%);
     display: grid;
     place-items: center;
+    background-image: url("../img/KIT1.jpg");
+    background-size: contain;
+
  } 
  h2 {
-    background-color: hsl(200, 43%, 99%);
+    background-color: hsl(196, 22%, 90%);
     padding: 15px;
     border-radius: 10px;
     margin: 0;
@@ -18,7 +21,7 @@ body {
  }
 
 form {
-    background-color: hsl(200, 43%, 99%);
+    background-color: hsl(196, 22%, 90%);
     padding: 30px;
     margin: 40px auto;
     border-radius: 10px;

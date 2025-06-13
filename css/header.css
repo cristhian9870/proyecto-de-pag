@@ -19,12 +19,12 @@
 
 /* LOGO */
 .logo h1 {
-  color: white;
-  font-size: 50px;
-  margin: 0;
-  padding-right: 50px; 
+background-image: url("../img/BOLSO1.jpg");
+background-size: contain;
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
 }
-
 .logo span {
   color: #f9c449;
 }
