@@ -1,0 +1,234 @@
+.product-gallery-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #f9c449; /* Fondo blanco */
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    text-align: center; /* Centrar el título de la sección */
+}
+
+.section-title {
+    text-align: left; /* colocar el título */
+    color: #333;
+    font-size: 1,5em;
+    margin-bottom: 30px;
+    /*text-transform: uppercase;  Convierte todo el texto a MAYÚSCULAS (aunque se escriba en minúsculas) */ 
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.gallery-carousel-wrapper {
+    position: relative;
+    padding: 0 50px; /* Espacio para las flechas */
+}
+
+.gallery-carousel-container {
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes que están fuera de vista */
+    position: relative;
+}
+
+.gallery-carousel-track {
+    display: flex;
+    overflow-x: scroll; /* Permite el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Fuerza el "snap" a los elementos */
+    scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
+    
+    /* Ocultar la scrollbar, manteniendo la funcionalidad */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.gallery-carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.product-card-wrapper {
+    flex: 0 0 calc(25% - 20px); /* 4 ítems por vista en escritorio, con 10px de margen a cada lado */
+    margin: 0 10px;
+    height: 250px; /* Altura fija para el contenedor de la tarjeta (AJUSTADO AHORA) */
+    position: relative;
+    perspective: 1000px; /* Aplica la perspectiva al contenedor de la tarjeta para el volteo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Sombra sutil */
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que no haya desbordamiento visual */
+    
+    /* PROPIEDAD CLAVE PARA EL SCROLL CON FLECHAS HTML/CSS */
+    scroll-snap-align: start; /* Asegura que cada tarjeta se "encaje" al inicio */
+}
+
+/* Este es el elemento que realmente volteará */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Realice una voltereta horizontal al pasar el cursor sobre el contenedor de la caja volteada */
+.product-card-wrapper:hover .flip-card-inner { /* Asegúrate de que el hover está en el wrapper */
+    transform: rotateY(180deg);
+}
+
+/* Coloque la parte delantera y trasera */
+.flip-card-front, .flip-card-back { /* Ambos son ahora hijos directos de .flip-card-inner */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: #fff; /* Fondo blanco para ambas caras */
+    border-radius: 8px;
+    box-sizing: border-box; /* Incluir padding en el tamaño */
+    display: flex; /* Para organizar el contenido con flexbox */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+}
+
+/* Estilo para la imagen dentro de product-item (ahora directamente en flip-card-front) */
+.flip-card-front img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del frente */
+    height: 100%; /* La imagen ocupa el 100% de la altura del frente (que ahora es 250px) */
+    object-fit: cover; /* Cubre el área, recortando si es necesario */
+    display: block;
+    border-radius: 8px; /* Aplica el borde redondeado a toda la imagen frontal */
+}
+
+/* Información del producto en el frente - ESTE BLOQUE YA NO ES NECESARIO EN EL CSS */
+/* SE MANTUVO COMO COMENTARIO PARA REFERENCIA, PERO SE ELIMINA EN LA SALIDA FINAL */
+
+
+/* Estilo del descuento */
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff4d4f; /* Color de descuento */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    z-index: 2; /* Para que esté por encima de la imagen */
+}
+
+/* Estilo para la parte trasera */
+.flip-card-back {
+    background-color: rgb(39, 44, 48); /* Color de fondo de la parte trasera */
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+    justify-content: center; /* Centrar contenido verticalmente en la parte trasera */
+    box-sizing: border-box; /* Incluir padding en el tamaño */
+}
+
+.flip-card-back h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: goldenrod; /* Color blanco para el título en la parte trasera */
+}
+
+.flip-card-back p.description { /* Especificar p.description para evitar conflictos */
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #ccc; /* Color más claro para la descripción */
+}
+
+.flip-card-back .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: goldenrod; /* Mismo color dorado para el precio trasero */
+    margin-bottom: 15px;
+}
+
+.view-details-btn {
+    display: inline-block;
+    background-color: goldenrod;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: darkgoldenrod;
+}
+
+/* Flechas de navegación (ahora funcionales via :target) */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    color: #333; /* Color oscuro para el icono */
+    border: 1px solid #ccc; /* Borde sutil */
+    padding: 10px 12px; /* Ajusta el padding */
+    cursor: pointer; /* Cursor de puntero para indicar interactividad */
+    font-size: 1.5em; /* Tamaño del icono más grande */
+    z-index: 10;
+    border-radius: 50%; /* Flechas circulares */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    line-height: 1; /* Ajusta la altura de línea para centrar el icono */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nav-arrow:hover {
+    background-color: #e69138; /* Fondo naranja/dorado al pasar el ratón */
+    color: white;
+    border-color: #e69138;
+}
+
+.prev-arrow {
+    left: 0; /* Posiciona la flecha izquierda */
+}
+
+.next-arrow {
+    right: 0; /* Posiciona la flecha derecha */
+}
+
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .product-card-wrapper {
+        flex: 0 0 calc(33.333% - 20px); /* 3 ítems por vista */
+        height: 300px; /* Altura ajustada para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card-wrapper {
+        flex: 0 0 calc(50% - 20px); /* 2 ítems por vista */
+        height: 320px; /* Altura ajustada para pantallas de tablet */
+    }
+    .nav-arrow {
+        padding: 8px 10px;
+        font-size: 1.2em;
+    }
+    .gallery-carousel-wrapper {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card-wrapper {
+        flex: 0 0 calc(100% - 20px); /* 1 ítem por vista */
+        height: 340px; /* Altura ajustada para pantallas móviles */
+    }
+    .nav-arrow {
+        padding: 6px 8px;
+        font-size: 1em;
+    }
+    .gallery-carousel-wrapper {
+        padding: 0 30px;
+    }
+}
