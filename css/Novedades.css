@@ -2,7 +2,7 @@
     width: 90%;
     max-width: 1200px;
     margin: 40px auto;
-    background-color: #f9c449; /* Fondo blanco */
+    background-color: #f9c449; /* Fondo naranja/amarillo */
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border-radius: 8px;
@@ -12,9 +12,8 @@
 .section-title {
     text-align: left; /* colocar el título */
     color: #333;
-    font-size: 1,5em;
+    font-size: 1.5em; 
     margin-bottom: 30px;
-    /*text-transform: uppercase;  Convierte todo el texto a MAYÚSCULAS (aunque se escriba en minúsculas) */ 
     letter-spacing: 1px;
     text-decoration: underline;
 }
@@ -32,14 +31,21 @@
 
 .gallery-carousel-track {
     display: flex;
-    overflow-x: scroll; /* Permite el desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Fuerza el "snap" a los elementos */
-    scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
+        /*modificacion comentando unaslineas y escribiendo otras para el uso del js*/
+    transition: transform 0.5s ease-in-out;
+    will-change: transform; /* Mejora el rendimiento de la animación */
+
+    /*overflow-x: scroll;  Permite el desplazamiento horizontal */
+    /*scroll-behavior: smooth;  Hace que el desplazamiento sea suave */
     
     /* Ocultar la scrollbar, manteniendo la funcionalidad */
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    /*-ms-overflow-style: none;  IE and Edge */
+    /*scrollbar-width: none;  Firefox */
 }
+
+/*.cloned-item {
+     border: 2px dashed red;
+}*/
 
 .gallery-carousel-track::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
@@ -48,15 +54,14 @@
 .product-card-wrapper {
     flex: 0 0 calc(25% - 20px); /* 4 ítems por vista en escritorio, con 10px de margen a cada lado */
     margin: 0 10px;
-    height: 250px; /* Altura fija para el contenedor de la tarjeta (AJUSTADO AHORA) */
+    height: 250px; /* Altura fija para el contenedor de la tarjeta */
     position: relative;
     perspective: 1000px; /* Aplica la perspectiva al contenedor de la tarjeta para el volteo */
     box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Sombra sutil */
     border-radius: 8px;
     overflow: hidden; /* Asegura que no haya desbordamiento visual */
-    
-    /* PROPIEDAD CLAVE PARA EL SCROLL CON FLECHAS HTML/CSS */
-    scroll-snap-align: start; /* Asegura que cada tarjeta se "encaje" al inicio */
+    /* se agrega esta linea */
+    pointer-events: auto; /* Solo las cards reciben interacciones */
 }
 
 /* Este es el elemento que realmente volteará */
@@ -67,6 +72,8 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+/* se agrega esta linea */
+    pointer-events: none;  /*El contenedor padre maneja los eventos */
 }
 
 /* Realice una voltereta horizontal al pasar el cursor sobre el contenedor de la caja volteada */
@@ -88,6 +95,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Alinea el contenido al inicio */
+    /* se agrega esta linea */
+    pointer-events: none;  /*El contenedor padre maneja los eventos */
 }
 
 /* Estilo para la imagen dentro de product-item (ahora directamente en flip-card-front) */
@@ -98,10 +107,6 @@
     display: block;
     border-radius: 8px; /* Aplica el borde redondeado a toda la imagen frontal */
 }
-
-/* Información del producto en el frente - ESTE BLOQUE YA NO ES NECESARIO EN EL CSS */
-/* SE MANTUVO COMO COMENTARIO PARA REFERENCIA, PERO SE ELIMINA EN LA SALIDA FINAL */
-
 
 /* Estilo del descuento */
 .discount {
@@ -131,7 +136,7 @@
 .flip-card-back h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: goldenrod; /* Color blanco para el título en la parte trasera */
+    color: goldenrod; /* Color para el título en la parte trasera */
 }
 
 .flip-card-back p.description { /* Especificar p.description para evitar conflictos */
@@ -163,7 +168,7 @@
     background-color: darkgoldenrod;
 }
 
-/* Flechas de navegación (ahora funcionales via :target) */
+/* Flechas de navegación (ahora controladas por JS) */
 .nav-arrow {
     position: absolute;
     top: 50%;
@@ -180,6 +185,8 @@
     line-height: 1; /* Ajusta la altura de línea para centrar el icono */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    /* se agrega esta linea */
+    pointer-events: none;  /*El contenedor padre maneja los eventos */
 }
 
 .nav-arrow:hover {
@@ -231,4 +238,28 @@
     .gallery-carousel-wrapper {
         padding: 0 30px;
     }
+}
+
+/* Estilos para la página de detalle */
+.product-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#product-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #e69138;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
 }
