@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear cuenta</title>
+   <link rel="stylesheet" href="./css/registro.css" />
+</head>
+
+<body>
+
+  <h2>Crear cuenta en J&A IMPORT</h2>
+
+  <form id="formRegistro">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" required><br><br>
+
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" required><br><br>
+
+    <label for="contrasena">Contraseña:</label><br>
+    <input type="password" id="contrasena" required><br><br>
+
+    <label for="confirmar">Confirmar contraseña:</label><br>
+    <input type="password" id="confirmar" required><br><br>
+
+    <input type="submit" value="Crear cuenta">
+  </form>
+
+  <div id="mensajeRegistro"></div>
+
+  <script>
+    document.getElementById("formRegistro").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const contrasena = document.getElementById("contrasena").value;
+      const confirmar = document.getElementById("confirmar").value;
+      const mensaje = document.getElementById("mensajeRegistro");
+
+      if (contrasena !== confirmar) {
+        mensaje.textContent = " Las contraseñas no coinciden.";
+        mensaje.style.color = "red";
+        return;
+      }
+
+      // Obtener usuarios existentes
+      const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+      // Verificar si el correo ya existe
+      if (usuarios.some(u => u.correo === correo)) {
+        mensaje.textContent = " Este correo ya está registrado.";
+        mensaje.style.color = "red";
+        return;
+      }
+
+      // Agregar nuevo usuario
+      usuarios.push({ nombre, correo, contrasena });
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+      mensaje.textContent = " Cuenta creada con éxito. Redirigiendo...";
+      mensaje.style.color = "green";
+
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

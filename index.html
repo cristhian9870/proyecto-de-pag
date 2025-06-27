@@ -47,9 +47,11 @@
                 <input type="text" placeholder="Buscar productos...">
                 <button type="submit">Buscar</button>
             </form>
-            <a href="login.html" class="login">Iniciar sesión</a>
+                <a id="loginLink" href="login.html">Iniciar sesión</a>
+
             <a href="#" class="Carrito">Carrito</a>
         </div>
+    </header>
 
     </div>
 </header>
@@ -299,6 +301,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+          const loginLink = document.getElementById("loginLink");
+
+        if (usuarioActivo && loginLink) {
+         const nombreUsuario = document.createElement("span");
+        nombreUsuario.textContent = `👤 ${usuarioActivo.nombre}`;
+          nombreUsuario.classList.add("nombre-usuario");
+        loginLink.replaceWith(nombreUsuario);
+        }
+        });
+    </script>
+
 </body>
 
 </html>
