@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRO DE RECLAMACIONES</title>
+    <link rel="stylesheet" href="libro-recla.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LIBRO DE RECLAMACIONES</h1>
+
+        <form id="claimForm">
+            <div class="section">
+                <h2>Datos del Reclamante</h2>
+                <div class="form-group">
+                    <label for="documentType">Tipo de Documento:</label>
+                    <select id="documentType" name="documentType" required>
+                        <option value="">Seleccione</option>
+                        <option value="DNI">DNI</option>
+                        <option value="CE">Carné de Extranjería</option>
+                        <option value="PAS">Pasaporte</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dniNumber">Número de DNI:</label>
+                    <input type="text" id="dniNumber" name="dniNumber" pattern="[0-9]{8}" title="Ingrese 8 dígitos" required>
+                </div>
+                <div class="form-group">
+                    <label for="names">Nombres:</label>
+                    <input type="text" id="names" name="names" required>
+                </div>
+                <div class="form-group">
+                    <label for="surnames">Apellidos:</label>
+                    <input type="text" id="surnames" name="surnames" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo de Contacto:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Número de Contacto:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{9}" title="Ingrese 9 dígitos" required>
+                </div>
+                <div class="form-group">
+                    <label for="province">Provincia:</label>
+                    <input type="text" id="province" name="province" required>
+                </div>
+                <div class="form-group">
+                    <label for="district">Distrito:</label>
+                    <input type="text" id="district" name="district" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección de Domicilio:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Detalle de su Reclamo</h2>
+                <div class="form-group">
+                    <label for="claimType">Tipo:</label>
+                    <select id="claimType" name="claimType" required>
+                        <option value="">Seleccione</option>
+                        <option value="Producto">Reclamo sobre Producto</option>
+                        <option value="Servicio">Reclamo sobre Servicio</option>
+                        <option value="Facturacion">Reclamo sobre Facturación</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Motivo:</label>
+                    <input type="text" id="reason" name="reason" required>
+                </div>
+                <div class="form-group">
+                    <label for="claimDetails">Detalle de su Reclamo:</label>
+                    <textarea id="claimDetails" name="claimDetails" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="orderNumber">Número de Pedido (opcional):</label>
+                    <input type="text" id="orderNumber" name="orderNumber">
+                </div>
+            </div>
+
+            <button type="submit">Enviar Reclamo</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
