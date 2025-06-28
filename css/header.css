@@ -124,13 +124,25 @@ color: transparent;
   cursor: pointer;
 }
 
-.login,
+
 .Carrito {
-  color: white;
+  color: white !important; 
   text-decoration: none;
 }
 
-.login:hover,
+#loginLink{
+  color: white !important; 
+  text-decoration: none;
+}
+
 .Carrito:hover {
   text-decoration: underline;
+}
+
+.nombre-usuario {
+  background-color: #f9c449;
+  color: black;
+  padding: 2px 14px;
+  border-radius: 6px;
+  font-weight: bold;
 }

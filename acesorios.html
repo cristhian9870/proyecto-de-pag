@@ -1,54 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>J&A IMPORT</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/estilo.css" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/style-foot.css" />
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>J&A IMPORT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style-foot.css" />
+    <link rel="stylesheet" href="css/Novedades.css" />
 </head>
 
 <header class="header">
-  <div class="container">
+    <div class="container">
 
-    <!-- LOGO -->
-    <div class="logo">
-      <h1>J&A <span>IMPORT</span></h1>
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>J&A <span>IMPORT</span></h1>
+        </div>
+
+        <!-- MENÚ PRINCIPAL -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Historial</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- MENÚ DESPLEGABLE -->
+        <div class="menu-hover">
+            <span class="boton-menu">☰ Menú</span>
+            <ul class="submenu">
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="ropa.html">Ropa</a></li>
+                <li><a href="juguetes.html">Juguetes</a></li>
+                <li><a href="acesorios.html">Accesorios</a></li>
+            </ul>
+        </div>
+
+        <!-- BUSCADOR + SESIÓN + CARRITO -->
+        <div class="acciones-derecha">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+                <a id="loginLink" href="login.html">Iniciar sesión</a>
+
+            <a href="#" class="Carrito">Carrito</a>
+        </div>
+
     </div>
-
-    <!-- MENÚ PRINCIPAL -->
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#">Ofertas</a></li>
-        <li><a href="#">Historial</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <!-- MENÚ DESPLEGABLE -->
-    <div class="menu-hover">
-      <span class="boton-menu">☰ Menú</span>
-        <ul class="submenu">
-          <li><a href="tecnologia.html">Tecnología</a></li>
-            <li><a href="ropa.html">Ropa</a></li>
-            <li><a href="juguetes.html">Juguetes</a></li>
-          <li><a href="acesorios.html">Accesorios</a></li>
-        </ul>
-    </div>
-    
-    <!-- BUSCADOR + SESIÓN + CARRITO -->
-    <div class="acciones-derecha">
-      <form class="busqueda">
-        <input type="text" placeholder="Buscar productos...">
-        <button type="submit">Buscar</button>
-      </form>
-      <a href="login.html" class="login">Iniciar sesión</a>
-      <a href="#" class="Carrito">Carrito</a>
-    </div>
-
-  </div>
 </header>
+
+<body>
+   
+  <section class="main-container">
+    <h2 id="inter">Acesorios</h2>
+
+      <div class="products-grid page" id="pagina1">
+        <a href="#" class="product-item"><img src="./producto/accesorio/Collar Cadena Hombre Acero inoxidable.jpg"><h3>Producto 1</h3><p>Collar Cadena Hombre Acero inoxidable</p><span class="price">S/. 100</span></a>
+        <a href="#" class="product-item"><img src="./producto/accesorio/Funda Protectora para Celular.jpg" alt=""><h3>Producto 2</h3><p>Funda Protectora para Celular </p><span class="price">S/. 10</span></a>
+        <a href="#" class="product-item"><img src="./producto/accesorio/Lentes de Sol Guess Para Hombre GU001215601B.JPG" alt=""><h3>Producto 3</h3><p>Lentes de Sol Guess Para Hombre GU001215601B</p><span class="price">S/. 150</span></a>
+        <a href="#" class="product-item"><img src="./producto/accesorio/Pedir Collar de Mujer Liezel.JPG" alt=""><h3>Producto 4</h3><p>Collar de Mujer Liezel</p><span class="price">S/. 120</span></a>
+        <a href="#" class="product-item"><img src="./producto/accesorio/Porta Celular de Cuero Color Natural.JPG" alt=""><h3>Producto 5</h3><p>Porta Celular de Cuero Color Natural </p><span class="price">S/. 70</span></a>
+        <a href="#" class="product-item"><img src="./producto/accesorio/Pulsera de Plata  Árbol de la Vida.jpg" alt=""><h3>Producto 6</h3><p>Pulsera de Plata  Árbol de la Vida</p><span class="price">S/. 18</span></a>
+        <a href="#" class="product-item"><img src="./producto/accesorio/PULSERA HILO INFINITO - RED.jpg" alt=""><h3>Producto 7</h3><p>PULSERA HILO INFINITO - RED</p><span class="price">S/. 9</span></a>
+       
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="containerfooter">
+            <div class="footer-row">
+                <div class="footer-section">
+                    <h4>Sobre la Tienda</h4>
+                    <ul>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Nuestros Servicios</a></li>
+                        <!-- <li><a href="https://maps.app.goo.gl/3qwQ5YiKBk7kAVPX6">Ubicación</a></li> -->
+                        <li><a href="#">Políticas de Seguridad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contáctanos</h4>
+                    <a href="mailto:J&AIMPORT@gmail.com" class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>J&AIMPORT@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/51987628093" class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>987 628 093</span>
+                    </a>
+                    <a href="tel:012739283" class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>01 273 9283</span>
+                    </a>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <a href="#" class="social-item">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>J&AIMPORT</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@J&AIMPORT</span>
+                    </a>
+                    <a href="#" class="social-item">
+                        <i class="fab fa-tiktok"></i>
+                        <span>J&AIMPORT</span>
+                    </a>
+                </div>
+                <div class="footer-section">
+                    <h4> Ubicación </h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.908900274305!2d-77.04540032418396!3d-12.118385443239918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9fdebb881f3%3A0x4cef76dcb490c1e0!2sNotPig!5e0!3m2!1sen!2spe!4v1749600801949!5m2!1sen!2spe"
+                        width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="brand">J&AIMPORT</p>
+                <p class="copyright">&copy; 2025 Todos los derechos reservados. Diseñado por J&AIMPORT</p>
+            </div>
+        </div>
+    </footer> 
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+          const loginLink = document.getElementById("loginLink");
+
+        if (usuarioActivo && loginLink) {
+         const nombreUsuario = document.createElement("span");
+        nombreUsuario.textContent = `👤 ${usuarioActivo.nombre}`;
+          nombreUsuario.classList.add("nombre-usuario");
+        loginLink.replaceWith(nombreUsuario);
+        }
+        });
+    </script>
+
+</body>
+</html>
