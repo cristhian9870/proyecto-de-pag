@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Selección de elementos
-    const carouselTrack = document.querySelector('.gallery-carousel-track');
-    const productWrappers = document.querySelectorAll('.product-card-wrapper');
+    const carouselTrack = document.querySelector('.gallery-carousel-track');// Contenedor del carrusel
+    const productWrappers = document.querySelectorAll('.product-card-wrapper');// Tarjetas de productos
     const prevArrow = document.querySelector('.prev-arrow');
     const nextArrow = document.querySelector('.next-arrow');
     const carouselContainer = document.querySelector('.gallery-carousel-container');
 
     // 1. Clonación para efecto infinito (3 clones en cada extremo)
     const clonesStart = Array.from(productWrappers).slice(-3).map(card => {
-        const clone = card.cloneNode(true);
+        const clone = card.cloneNode(true);// Clona últimos 3
         clone.classList.add('js-clone');
         return clone;
     });
@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return clone;
     });
 
-    clonesStart.forEach(clone => carouselTrack.insertBefore(clone, carouselTrack.firstChild));
+    clonesStart.forEach(clone => carouselTrack.insertBefore(clone, carouselTrack.firstChild));// Inserta al inicio
     clonesEnd.forEach(clone => carouselTrack.appendChild(clone));
 
     // 2. Variables de estado
-    let currentIndex = 3;
+    let currentIndex = 3; // Empieza después de los clones iniciales
     let cardWidth = productWrappers[0].offsetWidth + 20;
-    let isAnimating = false;
+    let isAnimating = false; // Bloquea animaciones simultáneas
     let autoplayInterval;
     const totalItems = productWrappers.length;
     let isMouseOver = false;
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex += direction;
         
         carouselTrack.style.transition = 'transform 0.5s ease-in-out';
-        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;// Desplazamiento
     }
 
     // 4. Manejador de transiciones
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Efecto infinito
         if (currentIndex >= totalItems + 3) {
-            currentIndex = 3;
-            carouselTrack.style.transition = 'none';
+            currentIndex = 3; // Reinicia al inicio real
+            carouselTrack.style.transition = 'none'; // Sin animación
             carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
         } 
         else if (currentIndex <= 0) {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!autoplayInterval) {
             autoplayInterval = setInterval(() => {
                 if (!document.hidden && !isMouseOver) {
-                    moveCarousel(1);
+                    moveCarousel(1); // Solo si la pestaña está activa
                 }
             }, 3000); // Mantenemos 3 segundos
         }
@@ -100,14 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 8. Inicialización
     function initCarousel() {
-        cardWidth = productWrappers[0].offsetWidth + 20;
-        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        cardWidth = productWrappers[0].offsetWidth + 20; // Ancho + margen
+        carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`; // Posición inicial
         startAutoplay();
     }
 
     // 9. Observer para redimensionamiento
     const resizeObserver = new ResizeObserver(initCarousel);
-    resizeObserver.observe(carouselContainer);
+    resizeObserver.observe(carouselContainer); // Recalcula al cambiar tamaño
 
     initCarousel();
 
