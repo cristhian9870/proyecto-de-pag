@@ -1,72 +1,44 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const claimForm = document.getElementById('claimForm');
+// script.js
 
-//     claimForm.addEventListener('submit', (event) => {
-//         event.preventDefault(); // Evita el envío por defecto del formulario
+document.getElementById('claimForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de la forma tradicional
 
-//         // Captura de datos del reclamante
-//         const documentType = document.getElementById('documentType').value;
-//         const dniNumber = document.getElementById('dniNumber').value;
-//         const names = document.getElementById('names').value;
-//         const surnames = document.getElementById('surnames').value;
-//         const email = document.getElementById('email').value;
-//         const phoneNumber = document.getElementById('phoneNumber').value;
-//         const province = document.getElementById('province').value;
-//         const district = document.getElementById('district').value;
-//         const address = document.getElementById('address').value;
+    const form = event.target;
+    const formData = new FormData(form);
+    const data = {};
 
-//         // Captura de datos del detalle del reclamo
-//         const claimType = document.getElementById('claimType').value;
-//         const reason = document.getElementById('reason').value;
-//         const claimDetails = document.getElementById('claimDetails').value;
-//         const orderNumber = document.getElementById('orderNumber').value; // Opcional
+    // Convertir FormData a un objeto JavaScript simple
+    for (let [key, value] of formData.entries()) {
+        data[key] = value;
+    }
 
-//         // Creación de un objeto con los datos del reclamo
-//         const claimData = {
-//             datosReclamante: {
-//                 tipoDocumento: documentType,
-//                 numeroDNI: dniNumber,
-//                 nombres: names,
-//                 apellidos: surnames,
-//                 correoContacto: email,
-//                 numeroContacto: phoneNumber,
-//                 provincia: province,
-//                 distrito: district,
-//                 direccionDomicilio: address
-//             },
-//             detalleReclamo: {
-//                 tipo: claimType,
-//                 motivo: reason,
-//                 detalle: claimDetails,
-//                 numeroPedido: orderNumber || 'No especificado' // Si no hay número de pedido, muestra 'No especificado'
-//             }
-//         };
+    // Validación básica de campos obligatorios
+    if (!data.documentType || !data.dniNumber || !data.names || !data.surnames || !data.email || !data.phoneNumber || !data.province || !data.district || !data.address || !data.claimType || !data.reason || !data.claimDetails) {
+        alert('Por favor, complete todos los campos obligatorios.');
+        return;
+    }
 
-//         console.log('Datos del Reclamo:', claimData);
+    try {
+        // Asumiendo que tu servidor local se ejecuta en http://localhost:3000
+        // Puedes cambiar esta URL por la IP y puerto de tu servidor local
+        const response = await fetch('http://localhost:3000/submit-claim', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
 
-//         // Aquí es donde normalmente enviarías los datos a un servidor usando Fetch API o XMLHttpRequest
-//         // Ejemplo (descomenta para usar en un entorno real):
-//         /*
-//         fetch('/api/submit-claim', {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(claimData)
-//         })
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log('Respuesta del servidor:', data);
-//             alert('¡Reclamo enviado con éxito!');
-//             claimForm.reset(); // Limpia el formulario después del envío
-//         })
-//         .catch(error => {
-//             console.error('Error al enviar el reclamo:', error);
-//             alert('Hubo un error al enviar su reclamo. Por favor, inténtelo de nuevo.');
-//         });
-//         */
-
-//         alert('Reclamo enviado. Revisa la consola para ver los datos.');
-//         claimForm.reset(); // Limpia el formulario después de "enviar"
-//     });
-// });
+        if (response.ok) {
+            const result = await response.json();
+            alert('¡Su reclamo ha sido enviado con éxito! Recibirá una confirmación en su correo.');
+            form.reset(); // Limpiar el formulario
+        } else {
+            const errorText = await response.text();
+            alert('Hubo un error al enviar su reclamo: ' + errorText);
+        }
+    } catch (error) {
+        console.error('Error al enviar el reclamo:', error);
+        alert('No se pudo conectar con el servidor. Asegúrese de que el servidor esté funcionando.');
+    }
+});

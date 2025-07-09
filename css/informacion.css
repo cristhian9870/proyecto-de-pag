@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    background-color: whitesmoke;
+    color: #333;
+    
+} 
+
+        }
+h1, h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+           
+}
+h3 {
+    color: #3498db;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+p {
+    margin-bottom: 15px;
+}
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.section-nav {
+    margin-bottom: 40px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.section-nav a {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.section-nav a:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+}
+.footer-bottom {
+    background-color: gray;
+    padding-top: 20px;        /* Espacio de 30px en la parte superior */
+    border-top: 1px solid #e9ecef; /* Línea superior de 1px, color gris claro */
+    display: flex;            /* Usa flexbox para organizar elementos horizontalmente */
+    justify-content: space-between;
+    align-items: center;      /* Centra verticalmente los elementos */
+    flex-wrap: wrap;          /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    gap: 20px;                /* Espacio de 20px entre elementos */
+}
+
+/* ===== MARCA/LOGO EN LA PARTE INFERIOR ===== */
+.footer-bottom .brand {
+    color: #212529;
+    align-items: center;           /* Color gris oscuro */
+    font-weight: 600;         /* Texto semi-negrita */
+    font-size: 16px;          /* Tamaño de letra */
+    margin: 0;                /* Sin márgenes */
+}
+.footer-bottom .copyright {
+
+    background-color: gray;
+    color: #ffffff;           /* Color gris medio */
+    font-size: 14px;          /* Tamaño de letra más pequeño */
+    margin: 0;                /* Sin márgenes */
+    flex: 1;                  /* Toma todo el espacio disponible restante */
+    text-align: right;        /* Alinea el texto a la derecha */
+}

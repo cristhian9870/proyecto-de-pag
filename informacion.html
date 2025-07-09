@@ -4,84 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información sobre Nuestra Tienda - Productos Importados</title></head>
-<body>
 
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style-foot.css" />
+    <link rel="stylesheet" href="css/Novedades.css" />
+    <link rel="stylesheet" href="css/informacion.css" />
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        h3 {
-            color: #3498db;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .section-nav {
-            margin-bottom: 40px;
-            background-color: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .section-nav a {
-            display: inline-block;
-            margin: 0 15px;
-            padding: 10px 15px;
-            background-color: #3498db;
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .section-nav a:hover {
-            background-color: #2980b9;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Sobre Nuestra Tienda de Productos Importados</h1>
 
-        <div class="section-nav">
+    <header class="header">
+    <div class="container">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <h1>J&A <span>IMPORT</span></h1>
+        </div>
+
+        <!-- MENÚ PRINCIPAL -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Historial</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- MENÚ DESPLEGABLE -->
+        <div class="menu-hover">
+            <span class="boton-menu">☰ Menú</span>
+            <ul class="submenu">
+                <li><a href="tecnologia.html">Tecnología</a></li>
+                <li><a href="ropa.html">Ropa</a></li>
+                <li><a href="juguestes.html">Juguetes</a></li>
+                <li><a href="acesorios.html">Accesorios</a></li>
+            </ul>
+        </div>
+
+        <!-- BUSCADOR + SESIÓN + CARRITO -->
+        <div class="acciones-derecha">
+            <form class="busqueda">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+                <a id="loginLink" href="login.html">Iniciar sesión</a>
+
+            <a href="#" class="Carrito">Carrito</a>
+        </div>
+    </header>
+
+    </div>
+</header>
+
+    <div class="container">
+        <h1>Sobre Nuestra Tienda de Productos </h1>
+
+        <hr>
+
+        <!-- <div class="section-nav">
             <a href="#nosotros">Nosotros</a>
             <a href="#nuestros-servicios">Nuestros Servicios</a>
             <a href="#politicas-seguridad">Políticas de Seguridad</a>
-        </div>
+        </div> -->
 
         <section id="nosotros">
             <h2>Nosotros</h2>
@@ -149,6 +136,12 @@
             <p>Al utilizar nuestro sitio web, aceptas nuestras políticas de seguridad y privacidad. Te recomendamos revisarlas periódicamente para estar al tanto de cualquier actualización.</p>
         </section>
     </div>
+    <footer>
+            <div class="footer-bottom">
+                <p class="brand">J&AIMPORT</p>
+                <p class="copyright">&copy; 2025 Todos los derechos reservados. Diseñado por J&AIMPORT</p>
+            </div>
+    </footer>
 </body>
 </html>
     
