@@ -80,12 +80,15 @@
     width: 20px;              /* Ancho fijo de 20px para alinear todos los íconos */
     color: #6c757d;           /* Color gris medio */
     flex-shrink: 0;           /* Impide que el ícono se reduzca de tamaño */
+    text-decoration: none; 
 }
 
 /* ===== TEXTO DENTRO DE LOS ELEMENTOS DE CONTACTO ===== */
 .contact-item span {
+    text-decoration: none;  
     color: #6c757d;           /* Color gris medio */
     font-size: 15px;          /* Tamaño de letra de 15 píxeles */
+   
 }
 
 /* ===== ELEMENTOS DE REDES SOCIALES ===== */
@@ -110,12 +113,14 @@
     width: 20px;              /* Ancho fijo para alineación */
     color: #6c757d;           /* Color gris medio */
     flex-shrink: 0;           /* No se reduce de tamaño */
+    text-decoration: none; 
 }
 
 /* ===== TEXTO DE REDES SOCIALES ===== */
 .social-item span {
     color: #6c757d;           /* Color gris medio */
     font-size: 15px;          /* Tamaño de letra */
+    text-decoration: none; 
 }
 
 /* ===== PARTE INFERIOR DEL FOOTER ===== */
