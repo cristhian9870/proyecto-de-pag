@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accesorios</title>
+  <link rel="stylesheet" href="css/mas-vendido.css" />
+  <link rel="stylesheet" href="css/header.css" />
+</head>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <h1>J&A <span>IMPORT</span></h1>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Historial</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-hover">
+      <span class="boton-menu">☰ Menú</span>
+      <ul class="submenu">
+        <li><a href="tecnologia.html">Tecnología</a></li>
+        <li><a href="ropa.html">Ropa</a></li>
+        <li><a href="juguetes.html">Juguetes</a></li>
+        <li><a href="acesorios.html">Accesorios</a></li>
+      </ul>
+    </div>
+
+    <div class="acciones-derecha">
+      <form class="busqueda">
+        <input type="text" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+      </form>
+      <a href="login.html" class="login">Iniciar sesión</a>
+      <a href="#" class="Carrito">Carrito</a>
+    </div>
+  </div>
+</header>
+
+<body>
+  <section class="main-container">
+
+    <!-- Menú lateral -->
+    <aside class="sidebar-menu">
+      <nav>
+        <a href="mas-vendido.html" class="menu-button negro">Lo más vendido</a>
+      </nav>
+    </aside>
+
+    <!-- Radios ocultos -->
+    <input type="radio" id="pagina1-radio" name="pagina" checked hidden>
+    <input type="radio" id="pagina2-radio" name="pagina" hidden>
+
+    <!-- Contenido de productos -->
+    <section class="best-sellers">
+      <div class="header-buttons">
+        <label for="pagina1-radio" class="carousel-button">&lt;</label>
+        <label for="pagina2-radio" class="carousel-button">&gt;</label>
+      </div>
+
+      <!-- Página 1 -->
+      <div class="products-grid page" id="pagina1">
+        <a href="detalle-accesorio.html?id=reloj1" class="product-item"><img src="prd/reloj-mujer.jpg" alt=""><h3>Reloj Elegante Mujer</h3><p>Diseño moderno con correa de cuero</p><span class="price">S/. 89</span></a>
+        <a href="detalle-accesorio.html?id=mochila" class="product-item"><img src="prd/mochila.jpg" alt=""><h3>Mochila Urbana</h3><p>Antirrobo, USB integrado</p><span class="price">S/. 110</span></a>
+        <a href="detalle-accesorio.html?id=lentes" class="product-item"><img src="prd/lentes.jpg" alt=""><h3>Lentes de Sol</h3><p>Protección UV400, estilo aviador</p><span class="price">S/. 49</span></a>
+        <a href="detalle-accesorio.html?id=cartera" class="product-item"><img src="prd/cartera.jpg" alt=""><h3>Cartera Casual</h3><p>Espaciosa y elegante</p><span class="price">S/. 79</span></a>
+        <a href="detalle-accesorio.html?id=correa" class="product-item"><img src="prd/correa-cuero.jpg" alt=""><h3>Correa de Cuero</h3><p>Ajuste metálico, alta durabilidad</p><span class="price">S/. 59</span></a>
+        <a href="detalle-accesorio.html?id=anillo" class="product-item"><img src="prd/anillo.jpg" alt=""><h3>Anillo de Acero</h3><p>Unisex, resistente al agua</p><span class="price">S/. 39</span></a>
+      </div>
+
+      <!-- Página 2 -->
+      <div class="products-grid page" id="pagina2">
+        <a href="detalle-accesorio.html?id=collar" class="product-item"><img src="prd/collar.jpg" alt=""><h3>Collar Minimalista</h3><p>Baño de oro, diseño delicado</p><span class="price">S/. 45</span></a>
+        <a href="detalle-accesorio.html?id=aretes" class="product-item"><img src="prd/aretes.jpg" alt=""><h3>Aretes Elegantes</h3><p>Diseño de perlas con baño de plata</p><span class="price">S/. 49</span></a>
+        <a href="detalle-accesorio.html?id=bufanda" class="product-item"><img src="prd/bufanda.jpg" alt=""><h3>Bufanda Unisex</h3><p>Tejida, ideal para invierno</p><span class="price">S/. 30</span></a>
+        <a href="detalle-accesorio.html?id=llavero" class="product-item"><img src="prd/llavero.jpg" alt=""><h3>Llavero Capibara</h3><p>Suave, con diseño kawaii</p><span class="price">S/. 20</span></a>
+        <a href="detalle-accesorio.html?id=monedero" class="product-item"><img src="prd/monedero.jpg" alt=""><h3>Monedero Compacto</h3><p>Cierre de seguridad, liviano</p><span class="price">S/. 29</span></a>
+        <a href="detalle-accesorio.html?id=pulsera" class="product-item"><img src="prd/pulsera.jpg" alt=""><h3>Pulsera de Cuero</h3><p>Diseño trenzado, unisex</p><span class="price">S/. 35</span></a>
+      </div>
+    </section>
+  </section>
+</body>
+</html>

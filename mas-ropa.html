@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ropa</title>
+  <link rel="stylesheet" href="css/mas-vendido.css" />
+  <link rel="stylesheet" href="css/header.css" />
+</head>
+
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <h1>J&A <span>IMPORT</span></h1>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Historial</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-hover">
+      <span class="boton-menu">☰ Menú</span>
+      <ul class="submenu">
+        <li><a href="tecnologia.html">Tecnología</a></li>
+        <li><a href="ropa.html">Ropa</a></li>
+        <li><a href="juguetes.html">Juguetes</a></li>
+        <li><a href="acesorios.html">Accesorios</a></li>
+      </ul>
+    </div>
+
+    <div class="acciones-derecha">
+      <form class="busqueda">
+        <input type="text" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+      </form>
+      <a href="login.html" class="login">Iniciar sesión</a>
+      <a href="#" class="Carrito">Carrito</a>
+    </div>
+  </div>
+</header>
+
+<body>
+  <section class="main-container">
+
+    <!-- Menú lateral -->
+    <aside class="sidebar-menu">
+      <nav>
+        <a href="mas-vendido.html" class="menu-button negro">Lo más vendido</a>
+      </nav>
+    </aside>
+
+    <!-- Radios ocultos -->
+    <input type="radio" id="pagina1-radio" name="pagina" checked hidden>
+    <input type="radio" id="pagina2-radio" name="pagina" hidden>
+
+    <!-- Contenido de productos -->
+    <section class="best-sellers">
+      <div class="header-buttons">
+        <label for="pagina1-radio" class="carousel-button">&lt;</label>
+        <label for="pagina2-radio" class="carousel-button">&gt;</label>
+      </div>
+
+      <!-- Página 1 -->
+      <div class="products-grid page" id="pagina1">
+        <a href="detalle-ropa.html?id=ropa1" class="product-item"><img src="prd/polo-hombre.jpg" alt=""><h3>Polo Hombre</h3><p>100% algodón, varios colores</p><span class="price">S/. 35</span></a>
+        <a href="detalle-ropa.html?id=ropa2" class="product-item"><img src="prd/vestido.jpg" alt=""><h3>Vestido Casual</h3><p>Diseño moderno, fresco y elegante</p><span class="price">S/. 79</span></a>
+        <a href="detalle-ropa.html?id=ropa3" class="product-item"><img src="prd/casaca-jean.jpg" alt=""><h3>Casaca Jean</h3><p>Unisex, resistente y a la moda</p><span class="price">S/. 120</span></a>
+        <a href="detalle-ropa.html?id=ropa4" class="product-item"><img src="prd/pantalon-mujer.jpg" alt=""><h3>Pantalón Mujer</h3><p>Estilo skinny, ideal para todo el día</p><span class="price">S/. 69</span></a>
+        <a href="detalle-ropa.html?id=ropa5" class="product-item"><img src="prd/conjunto-deportivo.jpg" alt=""><h3>Conjunto Deportivo</h3><p>Top + Leggins, ideal para gym</p><span class="price">S/. 99</span></a>
+        <a href="detalle-ropa.html?id=ropa6" class="product-item"><img src="prd/chompa-invierno.jpg" alt=""><h3>Chompa de Invierno</h3><p>Forro térmico, capucha ajustable</p><span class="price">S/. 110</span></a>
+      </div>
+
+      <!-- Página 2 -->
+      <div class="products-grid page" id="pagina2">
+        <a href="detalle-ropa.html?id=ropa7" class="product-item"><img src="prd/camisa-hombre.jpg" alt=""><h3>Camisa Hombre</h3><p>Formal y casual, slim fit</p><span class="price">S/. 60</span></a>
+        <a href="detalle-ropa.html?id=ropa8" class="product-item"><img src="prd/blusa.jpg" alt=""><h3>Blusa Mujer</h3><p>Con botones y tela fresca</p><span class="price">S/. 49</span></a>
+        <a href="detalle-ropa.html?id=ropa9" class="product-item"><img src="prd/polo-niño.jpg" alt=""><h3>Polo Niño</h3><p>Estampados divertidos, 4 a 10 años</p><span class="price">S/. 29</span></a>
+        <a href="detalle-ropa.html?id=ropa10" class="product-item"><img src="prd/short.jpg" alt=""><h3>Short Deportivo</h3><p>Secado rápido, con bolsillos</p><span class="price">S/. 45</span></a>
+        <a href="detalle-ropa.html?id=ropa11" class="product-item"><img src="prd/zapatillas.jpg" alt=""><h3>Zapatillas Urbanas</h3><p>Unisex, cómodas y resistentes</p><span class="price">S/. 130</span></a>
+        <a href="detalle-ropa.html?id=ropa12" class="product-item"><img src="prd/gorra.jpg" alt=""><h3>Gorra Urbana</h3><p>Estilo casual con visera curva</p><span class="price">S/. 35</span></a>
+      </div>
+    </section>
+  </section>
+</body>
+</html>
