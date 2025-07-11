@@ -1,3 +1,4 @@
+/* Estilos para la sección de Novedades */
 .product-gallery-section {
     width: 90%;
     max-width: 1200px;
@@ -31,37 +32,50 @@
 
 .gallery-carousel-track {
     display: flex;
-        /*modificacion comentando unaslineas y escribiendo otras para el uso del js*/
     transition: transform 0.5s ease-in-out;
     will-change: transform; /* Mejora el rendimiento de la animación */
 
-    /*overflow-x: scroll;  Permite el desplazamiento horizontal */
-    /*scroll-behavior: smooth;  Hace que el desplazamiento sea suave */
-    
-    /* Ocultar la scrollbar, manteniendo la funcionalidad */
-    /*-ms-overflow-style: none;  IE and Edge */
-    /*scrollbar-width: none;  Firefox */
+    /* Las propiedades scroll-x y scrollbar se manejan por JS ahora */
+    /* overflow-x: scroll; */
+    /* scroll-behavior: smooth; */
+    /* -ms-overflow-style: none; */
+    /* scrollbar-width: none; */
 }
-
-/*.cloned-item {
-     border: 2px dashed red;
-}*/
 
 .gallery-carousel-track::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
 
-.product-card-wrapper {
+/* Enlace que envuelve toda la tarjeta */
+.product-card-link {
     flex: 0 0 calc(25% - 20px); /* 4 ítems por vista en escritorio, con 10px de margen a cada lado */
     margin: 0 10px;
     height: 250px; /* Altura fija para el contenedor de la tarjeta */
     position: relative;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto */
+    display: block; /* Para que ocupe todo el espacio */
+    /* Asegura que este elemento reciba los eventos del ratón */
+    pointer-events: auto; 
+    /* Añadir efecto de hover para toda la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-link:hover {
+    transform: translateY(-5px); /* Pequeña elevación al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra más pronunciada */
+}
+
+/* El contenedor de la tarjeta de volteo */
+.product-card-wrapper {
+    width: 100%; /* Ocupa el 100% del enlace padre */
+    height: 100%; /* Ocupa el 100% del enlace padre */
     perspective: 1000px; /* Aplica la perspectiva al contenedor de la tarjeta para el volteo */
     box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Sombra sutil */
     border-radius: 8px;
     overflow: hidden; /* Asegura que no haya desbordamiento visual */
-    /* se agrega esta linea */
-    pointer-events: auto; /* Solo las cards reciben interacciones */
+    /* IMPORTANTE: Los eventos del ratón pasan a través de este elemento a su padre (.product-card-link) */
+    pointer-events: none; 
 }
 
 /* Este es el elemento que realmente volteará */
@@ -72,12 +86,13 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-/* se agrega esta linea */
-    pointer-events: none;  /*El contenedor padre maneja los eventos */
+    /* IMPORTANTE: Los eventos del ratón pasan a través de este elemento a su padre (.product-card-link) */
+    pointer-events: none; 
 }
 
 /* Realice una voltereta horizontal al pasar el cursor sobre el contenedor de la caja volteada */
-.product-card-wrapper:hover .flip-card-inner { /* Asegúrate de que el hover está en el wrapper */
+/* El hover ahora se aplica al .product-card-link, que luego afecta a .flip-card-inner */
+.product-card-link:hover .flip-card-inner { 
     transform: rotateY(180deg);
 }
 
@@ -95,8 +110,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Alinea el contenido al inicio */
-    /* se agrega esta linea */
-    pointer-events: none;  /*El contenedor padre maneja los eventos */
+    /* IMPORTANTE: Los eventos del ratón pasan a través de este elemento a su padre (.product-card-link) */
+    pointer-events: none; 
 }
 
 /* Estilo para la imagen dentro de product-item (ahora directamente en flip-card-front) */
@@ -153,21 +168,6 @@
     margin-bottom: 15px;
 }
 
-.view-details-btn {
-    display: inline-block;
-    background-color: goldenrod;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.view-details-btn:hover {
-    background-color: darkgoldenrod;
-}
-
 /* Flechas de navegación (ahora controladas por JS) */
 .nav-arrow {
     position: absolute;
@@ -185,8 +185,7 @@
     line-height: 1; /* Ajusta la altura de línea para centrar el icono */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    /* se agrega esta linea */
-    pointer-events: none;  /*El contenedor padre maneja los eventos */
+    pointer-events: auto; /* Las flechas deben ser clickeables */
 }
 
 .nav-arrow:hover {
@@ -206,14 +205,14 @@
 
 /* Responsividad */
 @media (max-width: 1024px) {
-    .product-card-wrapper {
+    .product-card-link {
         flex: 0 0 calc(33.333% - 20px); /* 3 ítems por vista */
         height: 300px; /* Altura ajustada para pantallas medianas */
     }
 }
 
 @media (max-width: 768px) {
-    .product-card-wrapper {
+    .product-card-link {
         flex: 0 0 calc(50% - 20px); /* 2 ítems por vista */
         height: 320px; /* Altura ajustada para pantallas de tablet */
     }
@@ -227,7 +226,7 @@
 }
 
 @media (max-width: 480px) {
-    .product-card-wrapper {
+    .product-card-link {
         flex: 0 0 calc(100% - 20px); /* 1 ítem por vista */
         height: 340px; /* Altura ajustada para pantallas móviles */
     }
@@ -240,26 +239,108 @@
     }
 }
 
-/* Estilos para la página de detalle */
+/* Estilos para la página de detalle (novedades.html) */
 .product-detail {
-    max-width: 800px;
+    max-width: 900px; /* Aumentamos el ancho para el diseño de dos columnas */
     margin: 2rem auto;
-    padding: 1rem;
-    text-align: center;
+    padding: 20px; /* Más padding para que no esté pegado a los bordes */
+    background-color: #ffffff; /* Fondo blanco para el detalle */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex; /* Habilitamos Flexbox */
+    flex-direction: column; /* Ahora es una columna para apilar el contenido y el botón */
+    align-items: center; /* Centra los elementos horizontalmente en la columna */
+    gap: 30px; /* Espacio entre el contenedor de contenido y el botón */
 }
 
-#product-image {
-    width: 100%;
-    max-width: 400px;
+.product-content-wrapper { /* Nuevo contenedor para la imagen y la información */
+    display: flex;
+    flex-direction: row; /* La imagen y la info van en fila */
+    align-items: flex-start; /* Alinea la imagen y la info al inicio (arriba) */
+    gap: 40px; /* Espacio entre la imagen y la información */
+    width: 100%; /* Ocupa todo el ancho disponible del padre */
+}
+
+.product-detail #imagen {
+    flex: 0 0 45%; /* La imagen ocupa el 45% del ancho */
+    max-width: 45%; /* Asegura que no crezca más allá de eso */
+    height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 8px;
+    object-fit: contain; /* Ajusta la imagen dentro de su contenedor sin recortar */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#detalle-info { /* Contenedor para el texto */
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex; /* Habilitamos Flexbox para centrar su contenido */
+    flex-direction: column; /* Apila el título, descripción y precio */
+    align-items: center; /* Centra el texto horizontalmente */
+    justify-content: center; /* Centra el texto verticalmente si hay espacio */
+    padding-top: 0; /* No necesitamos padding-top aquí */
+}
+
+#detalle-info h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px; /* Ajustado para un espaciado más compacto */
+}
+
+#detalle-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px; /* Ajustado para un espaciado más compacto */
+}
+
+#detalle-info #precio {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e69138; /* Color dorado para el precio */
+    margin-top: 15px; /* Ajustado el margen superior */
+    margin-bottom: 0; /* No necesita margen inferior si el botón está fuera */
 }
 
 .back-btn {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    margin-top: 20px; /* Más espacio sobre el botón */
+    padding: 12px 25px; /* Más grande y fácil de hacer clic */
     background-color: #e69138;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; /* Asegura que el botón se centre dentro del .product-detail (flex-column) */
+}
+
+.back-btn:hover {
+    background-color: #d68128;
+    transform: translateY(-2px);
+}
+
+/* Responsividad para la página de detalle */
+@media (max-width: 768px) {
+    .product-detail {
+        flex-direction: column; /* Mantiene columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .product-content-wrapper { /* En pantallas pequeñas, la imagen y la info se apilan */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .product-detail #imagen {
+        flex: none; /* Elimina la flex-base */
+        max-width: 80%; /* La imagen ocupa más ancho en móviles */
+        width: 100%; /* Asegura que la imagen sea fluida */
+    }
+
+    #detalle-info {
+        text-align: center; /* Centra el texto en móviles */
+        padding-top: 0;
+    }
 }
