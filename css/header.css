@@ -1,9 +1,15 @@
 
 .header {
+
   background: linear-gradient(90deg, #1f1f1f, #646363);
   padding: 10px;
   border-radius: 8px;
   margin: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .container {
