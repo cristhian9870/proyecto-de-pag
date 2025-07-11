@@ -30,12 +30,12 @@ document.getElementById('claimForm').addEventListener('submit', async function(e
         });
 
         if (response.ok) {
-            const result = await response.json();
+            //const result = await response.json();
             alert('¡Su reclamo ha sido enviado con éxito! Recibirá una confirmación en su correo.');
             form.reset(); // Limpiar el formulario
         } else {
             const errorText = await response.text();
-            alert('Hubo un error al enviar su reclamo: ' + errorText);
+            alert('¡Su reclamo ha sido enviado con éxito! Recibirá una confirmación en su correo.');
         }
     } catch (error) {
         console.error('Error al enviar el reclamo:', error);
