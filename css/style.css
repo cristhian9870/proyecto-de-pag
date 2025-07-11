@@ -8,6 +8,50 @@
     align-items: center;
     min-height: 100vh;
 }*/
+.publicity-carousel-container {
+  width: 100%;
+  height: 30px;
+  max-width: 1200px; /* Ancho máximo para el carrusel, ajusta si es necesario */
+  margin: 0 auto 20px auto; /* Centra el carrusel y añade margen inferior */
+  overflow: hidden; /* Importante para ocultar los elementos fuera de vista */
+  position: relative; /* Necesario para posicionar el carrusel interno */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+  background-color: #f0f0f0; /* Color de fondo del contenedor */
+  padding: 10px 0; /* Un poco de padding vertical */
+}
+
+.publicity-carousel {
+  display: flex; /* Para poner los elementos en fila */
+  transition: transform 0.5s ease-in-out; /* Transición suave para el movimiento */
+  width: 300%; /* Si tienes 3 anuncios, es 300%; si tienes N, es N * 100% */
+        /* Ajusta este ancho según el número de anuncios que tengas */
+}
+
+.carousel-item {
+  min-width: 100%; /* Cada item ocupa el 100% del ancho del carrusel-container */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  text-align: center;
+  display: block; /* Asegura que el enlace ocupe todo el espacio */
+  text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.carousel-item img {
+  max-width: 90%; /* Hace que la imagen sea responsive */
+  height: auto; /* Mantiene la relación de aspecto */
+  display: block; /* Elimina espacio extra debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen */
+}
+
+    /* Opcional: Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .publicity-carousel-container {
+    padding: 8px 0;
+    margin-bottom: 15px;
+  }
+  .carousel-item img {
+    max-width: 95%;
+  }
+}
 
 .most-sold-section {
     width: 90%;
