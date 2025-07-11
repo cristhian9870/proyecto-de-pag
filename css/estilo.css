@@ -4,8 +4,19 @@ body {
   background-color: #fdfdfd;
 }
 
+.best-sellers h2 {
+  /* position: relative; */
+
+}
+
 .best-sellers {
-  position: relative;
+  /* position: relative; */
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+  z-index: 1000;
 }
 
 .best-sellers h2 {
