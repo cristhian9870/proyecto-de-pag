@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Producto</title>
-    <link rel="stylesheet" href="css/Novedades.css">
+    <!-- Asegúrate de que esta ruta a tu CSS sea correcta -->
+    <link rel="stylesheet" href="css/Novedades.css"> 
 </head>
 <body>
-    <div class="product-detail">
-        <img id="product-image" src="" alt="Producto">
-        <h1 id="product-title"></h1>
-        <p id="product-description"></p>
-        <p id="product-price"></p>
-        <!-- Botón de regreso -->
+    <!-- El contenedor principal del detalle del producto -->
+    <div class="product-detail" id="detalle"> 
+        <!-- Nuevo contenedor para la imagen y la información del producto -->
+        <div class="product-content-wrapper">
+            <!-- Aquí se cargará la imagen del producto -->
+            <img id="imagen" src="" alt="Imagen del Producto">
+            
+            <!-- Contenedor para la información textual del producto -->
+            <div id="detalle-info">
+                <!-- Aquí se cargará el título del producto -->
+                <h1 id="nombre"></h1>
+                
+                <!-- Aquí se cargará la descripción del producto -->
+                <p id="descripcion"></p>
+                
+                <!-- Aquí se cargará el precio del producto -->
+                <p id="precio"></p>
+            </div>
+        </div>
+        
+        <!-- Botón para regresar a la página principal de Novedades -->
         <a href="index.html" class="back-btn">Volver a Novedades</a>
     </div>
 
+    <!-- ¡IMPORTANTE! Aquí enlazaremos el archivo JavaScript 'product.js'
+         que se encargará de cargar los detalles del producto.
+         Asegúrate de que la ruta 'js/product.js' sea correcta desde la ubicación de este archivo HTML. -->
     <script src="js/product.js"></script>
 </body>
 </html>
+
