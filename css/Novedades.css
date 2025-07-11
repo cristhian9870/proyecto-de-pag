@@ -262,11 +262,11 @@
 }
 
 .product-detail #imagen {
-    flex: 0 0 45%; /* La imagen ocupa el 45% del ancho */
-    max-width: 45%; /* Asegura que no crezca más allá de eso */
-    height: auto; /* Mantiene la proporción de la imagen */
+    flex: 0 0 300px; /* La imagen ocupa un ancho fijo de 300px */
+    width: 300px; /* Asegura el ancho */
+    height: 300px; /* Asegura la altura para que sea un cuadrado */
+    object-fit: cover; /* Recorta la imagen para que rellene el cuadrado */
     border-radius: 8px;
-    object-fit: contain; /* Ajusta la imagen dentro de su contenedor sin recortar */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -283,6 +283,7 @@
     font-size: 2em;
     color: #333;
     margin-bottom: 10px; /* Ajustado para un espaciado más compacto */
+    text-align: center; /* Centra el título */
 }
 
 #detalle-info p {
@@ -290,6 +291,7 @@
     line-height: 1.6;
     color: #555;
     margin-bottom: 10px; /* Ajustado para un espaciado más compacto */
+    text-align: center; /* Centra la descripción */
 }
 
 #detalle-info #precio {
@@ -298,6 +300,7 @@
     color: #e69138; /* Color dorado para el precio */
     margin-top: 15px; /* Ajustado el margen superior */
     margin-bottom: 0; /* No necesita margen inferior si el botón está fuera */
+    text-align: center; /* Centra el precio */
 }
 
 .back-btn {
@@ -337,6 +340,8 @@
         flex: none; /* Elimina la flex-base */
         max-width: 80%; /* La imagen ocupa más ancho en móviles */
         width: 100%; /* Asegura que la imagen sea fluida */
+        height: auto; /* Permite que la altura se ajuste proporcionalmente en móviles */
+        aspect-ratio: 1 / 1; /* Mantiene la proporción cuadrada incluso si la imagen no es perfecta */
     }
 
     #detalle-info {
