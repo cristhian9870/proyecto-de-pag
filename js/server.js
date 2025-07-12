@@ -11,8 +11,8 @@ const PORT = 3000;
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Puedes usar 'outlook', 'hotmail', o configurar un host SMTP personalizado
     auth: {
-        user: 'alemanero1234@gmail.com', // Reemplaza con tu dirección de correo electrónico
-        pass: 'Perros123@' // Reemplaza con tu contraseña de aplicación (si es Gmail) o tu contraseña normal
+        user: '@gmail.com', // Reemplaza con tu dirección de correo electrónico
+        pass: '' // Reemplaza con tu contraseña de aplicación (si es Gmail) o tu contraseña normal
     }
 });
 // --- Fin de la Configuración de Nodemailer ---
