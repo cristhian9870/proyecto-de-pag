@@ -4,36 +4,21 @@ body {
   margin: 140px;
   background-color: #fdfdfd;
   width: 100%;
-  z-index: 1000; */
-}
-
-
-
-
-
-.best-sellers h2 {
-  position: relative;
-
+  z-index: 1000;
 }
 
 .best-sellers {
   position: relative;
-  /* display: flex;
-
-  justify-content: center;
-
-  width: 100%;
-  z-index: 1000; */
 }
 
 .best-sellers h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  border-bottom: 2px solid goldenrod; 
+  border-bottom: 2px solid goldenrod;
   padding-bottom: 5px;
-  display: inline-block; 
+  display: inline-block;
   color: goldenrod;
-  text-align: left;   
+  text-align: left;
 }
 
 .best-sellers h2 a {
@@ -45,7 +30,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: center;
 }
 
 .scroll-container {
@@ -56,12 +41,45 @@ body {
   padding: 10px 0;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  flex: 1; 
-  margin: 0 10px;
+  flex: 1;
+  margin: 0 40px;
 }
 
 .scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+.arrow {
+  font-size: 40px;
+  color: goldenrod;
+  text-decoration: none;
+  padding: 10px;
+  user-select: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 0 5px #ccc;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: goldenrod;
+  color: white;
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
 }
 
 .product-item {
@@ -72,15 +90,11 @@ body {
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s;
-  outline: none; 
+  outline: none;
 }
 
 .product-item:hover {
   transform: scale(1.05);
-}
-
-.product-item:focus {
-  outline: none;
 }
 
 .product-item img {
@@ -112,13 +126,17 @@ body {
   padding: 10px;
   user-select: none;
   cursor: pointer;
-  background-color: rgba(255 255 255 / 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   box-shadow: 0 0 5px #ccc;
   transition: background-color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .arrow:hover {
@@ -127,21 +145,11 @@ body {
 }
 
 .arrow-left {
-  order: 0;
+  left: 0;
 }
 
 .arrow-right {
-  order: 2;
-}
-
-.best-sellers h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid goldenrod;
-  padding-bottom: 5px;
-  display: inline-block;
-  color: goldenrod;
-  text-align: left;     
+  right: 0;
 }
 
 .products-grid {
@@ -154,20 +162,22 @@ body {
   margin-right: 0;
 }
 
- #detalle {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-    #imagen {
-      max-width: 300px;
-      margin: 15px 0;
-    }
-    #precio {
-      color: green;
-      font-size: 24px;
-    }
+#detalle {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#imagen {
+  max-width: 300px;
+  margin: 15px 0;
+}
+
+#precio {
+  color: green;
+  font-size: 24px;
+}

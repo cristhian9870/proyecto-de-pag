@@ -191,14 +191,12 @@
     <!--<script src="js/product.js"></script>-->
 
     <!-- aqui termina novedades -->
-
-    <section class="best-sellers">
-        <h2><a href="mas-vendido.html">¡Lo más vendido!</a></h2>
-
-        <br>
-
-        <div class="carousel-container">
-            <a href="#product1" class="arrow arrow-left">&#8249;</a>
+<section class="best-sellers">
+    <h2><a href="mas-vendido.html">¡Lo más vendido!</a></h2>
+    <br>
+    <div class="carousel-container">
+        <!-- FLECHAS ACTUALIZADAS -->
+        <span class="arrow arrow-left" id="leftArrow">&#8249;</span>
 
             <div class="scroll-container">
                 <a href="detalle-producto.html?id=product1" class="product-item" id="product1">
@@ -263,7 +261,8 @@
                 </a>
             </div>
 
-            <a href="#product10" class="arrow arrow-right">&#8250;</a>
+           <span class="arrow arrow-right" id="rightArrow">&#8250;</span>
+</div>
         </div>
     </section>
     <footer class="footer">
@@ -331,7 +330,27 @@
             </div>
         </div>
     </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollContainer = document.querySelector(".scroll-container");
+    const leftArrow = document.getElementById("leftArrow");
+    const rightArrow = document.getElementById("rightArrow");
 
+    leftArrow.addEventListener("click", () => {
+      scrollContainer.scrollBy({
+        left: -300, // hacia la izquierda
+        behavior: "smooth",
+      });
+    });
+
+    rightArrow.addEventListener("click", () => {
+      scrollContainer.scrollBy({
+        left: 300, // hacia la derecha
+        behavior: "smooth",
+      });
+    });
+  });
+</script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
           const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));

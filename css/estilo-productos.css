@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#detalle {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+#nombre {
+  font-size: 28px;
+  color: goldenrod;
+  margin-bottom: 20px;
+}
+
+#imagen {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#descripcion {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 25px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: goldenrod;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #b8860b;
+}
