@@ -56,12 +56,7 @@ app.post('/submit-claim', async (req, res) => {
         <p>Este es un mensaje automático del Libro de Reclamaciones.</p>
     `;
 
-    const mailOptions = {
-        from: 'alemanero1234@gmail.com', // El mismo correo de la configuración de Nodemailer
-        to: 'alemanero1234@ejemplo.com', // Reemplaza con el correo donde quieres recibir los reclamos
-        subject: `Nuevo Reclamo del Libro de Reclamaciones - ${claimData.names} ${claimData.surnames}`,
-        html: emailContent // Contenido del correo en formato HTML
-    };
+    
 
     try {
         await transporter.sendMail(mailOptions);
